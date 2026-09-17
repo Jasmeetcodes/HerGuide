@@ -1,0 +1,56 @@
+[
+  {
+    "id": "res-1",
+    "title": "National Commission for Women (NCW) Helpline",
+    "category": "safety",
+    "categoryLabel": "Safety & Crisis",
+    "description": "24/7 dedicated helpline offering immediate support, counseling, and intervention for women facing violence or harassment.",
+    "url": "http://ncw.nic.in/",
+    "helpline": "181 / 7827170170"
+  },
+  {
+    "id": "res-2",
+    "title": "National Legal Services Authority (NALSA)",
+    "category": "legal",
+    "categoryLabel": "Legal Aid",
+    "description": "Free legal aid and advisory services to eligible women across district, state, and national legal service authorities.",
+    "url": "https://nalsa.gov.in/",
+    "helpline": "15100"
+  },
+  {
+    "id": "res-3",
+    "title": "iCALL Psychosocial Helpline",
+    "category": "wellness",
+    "categoryLabel": "Mental Wellness",
+    "description": "Free telephone and email-based counseling by trained mental health professionals for emotional distress, relationship issues, and trauma.",
+    "url": "https://tiss.edu/view/6/projects/icall-telephonic-counselling/",
+    "helpline": "9152987821"
+  },
+  {
+    "id": "res-4",
+    "title": "Pradhan Mantri Matru Vandana Yojana",
+    "category": "health",
+    "categoryLabel": "Health & Wellbeing",
+    "description": "Maternity benefit program offering cash incentives for pregnant and lactating mothers to improve health and nutrition seeking behavior.",
+    "url": "https://wcd.nic.in/",
+    "helpline": "011-23382393"
+  },
+  {
+    "id": "res-5",
+    "title": "Women Who Code & Tech Uplift",
+    "category": "career",
+    "categoryLabel": "Career & Education",
+    "description": "Global and regional mentorship networks, job boards, and free coding workshops designed to empower women in STEM careers.",
+    "url": "https://www.womenwhocode.com/",
+    "helpline": "Online Community"
+  },
+  {
+    "id": "res-6",
+    "title": "Cyber Crime Reporting Portal",
+    "category": "safety",
+    "categoryLabel": "Safety & Crisis",
+    "description": "Official portal to report online cyber harassment, morphing, stalking, and identity theft with special priority given to women and children.",
+    "url": "https://cybercrime.gov.in/",
+    "helpline": "1930"
+  }
+]

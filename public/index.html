@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HerGuide — Everyday Resources for Women</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sticky Quick Help Banner (Emergency Helplines) -->
+  <aside class="quick-help-banner" aria-label="Emergency Helplines">
+    <div class="banner-container">
+      <span class="banner-title"><span class="badge-alert">🆘 Emergency Help</span></span>
+      <div class="helpline-links">
+        <a href="tel:181" class="helpline-tag">Women's Helpline: <strong>181</strong></a>
+        <span class="divider">|</span>
+        <a href="tel:112" class="helpline-tag">National Emergency: <strong>112</strong></a>
+        <span class="divider">|</span>
+        <a href="tel:1091" class="helpline-tag">Women in Distress: <strong>1091</strong></a>
+        <span class="divider">|</span>
+        <a href="tel:1930" class="helpline-tag">Cyber Helpline: <strong>1930</strong></a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="top">
+    <div class="nav-container">
+      <a href="#top" class="brand-logo">
+        <span class="brand-icon">💜</span>
+        <span class="brand-name">HerGuide</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#directory" class="nav-link">Directory</a>
+        <a href="#saved" class="nav-link">
+          Saved Resources <span class="saved-count-badge" id="savedCountBadge">0</span>
+        </a>
+        <a href="#ai-assistant" class="nav-link ai-nav-link">✨ AI Assistant</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-container">
+        <h1 class="hero-title">Your trusted companion for essential everyday resources.</h1>
+        <p class="hero-tagline">Find verified legal aid, healthcare, career support, safety networks, and wellness services all in one place.</p>
+        
+        <div class="search-bar-wrapper">
+          <span class="search-icon">🔍</span>
+          <input 
+            type="search" 
+            id="searchInput" 
+            class="search-input" 
+            placeholder="Search resources, topics, or services (e.g. legal, mental health, career)..." 
+            aria-label="Search resources"
+          >
+          <button id="clearSearchBtn" class="clear-search-btn" title="Clear search" style="display: none;">✕</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resource Directory Section -->
+    <section class="directory-section" id="directory">
+      <div class="section-container">
+        <div class="section-header">
+          <h2>Resource Directory</h2>
+          <p class="section-desc">Browse through carefully curated support systems and programs.</p>
+        </div>
+
+        <!-- Filter Category Pills -->
+        <div class="category-filters" id="categoryFilters" role="tablist" aria-label="Resource Categories">
+          <button class="filter-pill active" data-category="all" role="tab" aria-selected="true">All</button>
+          <button class="filter-pill" data-category="safety" role="tab" aria-selected="false">🛡️ Safety & Crisis</button>
+          <button class="filter-pill" data-category="health" role="tab" aria-selected="false">🏥 Health & Wellbeing</button>
+          <button class="filter-pill" data-category="legal" role="tab" aria-selected="false">⚖️ Legal Aid</button>
+          <button class="filter-pill" data-category="career" role="tab" aria-selected="false">💼 Career & Education</button>
+          <button class="filter-pill" data-category="wellness" role="tab" aria-selected="false">🌱 Mental Wellness</button>
+        </div>
+
+        <!-- Resources Grid -->
+        <div class="resource-grid" id="resourceGrid">
+          <!-- Cards are dynamically rendered by script.js -->
+        </div>
+
+        <div class="empty-state" id="noResults" style="display: none;">
+          <p>No matching resources found. Try another search or filter.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Saved Resources Section -->
+    <section class="saved-section" id="saved">
+      <div class="section-container">
+        <div class="saved-header">
+          <div>
+            <h2>Saved Resources</h2>
+            <p class="section-desc">Quickly revisit items you have saved locally on this browser.</p>
+          </div>
+          <button class="btn-secondary" id="clearAllSavedBtn">Clear All</button>
+        </div>
+
+        <div class="resource-grid" id="savedResourceGrid">
+          <!-- Saved cards will be inserted here -->
+        </div>
+
+        <div class="empty-state" id="emptySavedState">
+          <p>You haven't saved any resources yet. Tap the <strong>❤️ Save</strong> button on any card above to pin it here.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Resource Assistant Section -->
+    <section class="ai-section" id="ai-assistant">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="badge-accent">Preview Feature</span>
+          <h2>AI Resource Assistant</h2>
+          <p class="section-desc">Describe what you need in plain words, and our assistant will suggest relevant resources.</p>
+        </div>
+
+        <div class="ai-chat-card">
+          <div class="ai-chat-header">
+            <span class="ai-chat-status">✨ HerGuide Assistant (Gemini Ready)</span>
+            <span class="ai-mode-pill">Demo Mode</span>
+          </div>
+
+          <div class="ai-chat-messages" id="chatMessages">
+            <div class="chat-message assistant-message">
+              <div class="chat-avatar">💜</div>
+              <div class="chat-bubble">
+                <p>Hello! I am your HerGuide assistant. What kind of help or resource are you looking for today?</p>
+                <p class="chat-hint">Try asking: <em>"Where can I find free legal advice?"</em> or <em>"I need mental health counseling."</em></p>
+              </div>
+            </div>
+          </div>
+
+          <form class="ai-chat-input-area" id="chatForm">
+            <input 
+              type="text" 
+              id="chatInput" 
+              class="chat-input" 
+              placeholder="Ask a question or describe your situation..." 
+              autocomplete="off"
+              required
+            >
+            <button type="submit" class="btn-primary" id="chatSendBtn">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="brand-icon">💜</span> <strong>HerGuide</strong>
+        <p class="footer-subtext">Empowering women with easy access to verified everyday resources.</p>
+      </div>
+      <div class="footer-meta">
+        <p>Built for the Practice Hackathon &bull; Open Source Initiative</p>
+        <p class="disclaimer">Disclaimer: In immediate danger, always contact your local emergency services directly.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div id="toast" class="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
